@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useMemo } from "react";
 import './style.css';
 
+function PercentageDisplay({ totalItems, checkedItems }) {
+  const percentage = totalItems > 0 ? ((checkedItems.length / totalItems) * 100).toFixed(2) : 0;
+  return (
+    <div className="percentagedisplay">
+      {`Checked: ${percentage}%`}
+    </div>
+  );
+}
+
 function App() {
   // State with list of all checked item
   const [checked, setChecked] = useState([]);
@@ -50,6 +59,8 @@ function App() {
         </div>
       </div>
 
+      <PercentageDisplay totalItems={checkList.length} checkedItems={checked} />
+            
       <div className="selecteditems">
         {`Selected items: ${checked.map((index) => checkList[index]).join(", ")}`}
       </div>
