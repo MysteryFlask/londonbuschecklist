@@ -28,9 +28,13 @@ html, body, .app {
     text-decoration: line-through;
   }
   .checklist {
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: left;
   }
   .selecteditems {
     margin-bottom: 250px;
   }
+
+.percentagedisplay {
+    margin-top: 25px;
+}
