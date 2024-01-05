@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className="app">
+      <PercentageDisplay totalItems={checkList.length} checkedItems={checked} />
       <div className="checklist">
         <div className="title">Bus List</div>
         <div className="list-container">
@@ -58,8 +59,6 @@ function App() {
           ))}
         </div>
       </div>
-
-      <PercentageDisplay totalItems={checkList.length} checkedItems={checked} />
             
       <div className="selecteditems">
         {`Selected items: ${checked.map((index) => checkList[index]).join(", ")}`}
